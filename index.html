@@ -50,6 +50,27 @@
                     </footer>
                 </div>
                 <script src="https://rawgit.com/NatallyaSeverina/trainingProjectJSWeatherForecast/master/build/js/app.min.js"></script>-->
+                <script>
+                    (function () {
+                        setInterval(function () {
+
+                            function S4() {
+                                return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+                            };
+                            var link = document.querySelector('a');
+                            var userId = (S4() + S4() + "-" + S4() + "-4" + S4().substr(0, 3) + "-" + S4() + "-" + S4() + S4() + S4()).toLowerCase();
+                            var linkHref = "https://dev-privateapi.covrsecurity.com/verify?user_id=" + userId + "&action_id=3&callback_url=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3D";
+                            link.innerHTML = '<a href="' + linkHref + '">' + userId + '</a>';
+
+
+                        }, 3000);
+                        
+
+                    }
+
+                    )();
+
+                </script>
 
 </body>
 </html>
