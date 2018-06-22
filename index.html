@@ -87,7 +87,7 @@
                         var img = div.querySelector('img');
                         img.src = "data:image/png;base64," + JSON.parse(data).QRCode;
                         var link = div.querySelector('a');
-                        var linkHref = "https://secure.covrsecurity.io/addConnection?data" + JSON.parse(data).QRCodeString;
+                        var linkHref = "https://secure.covrsecurity.io/addConnection?data=" + JSON.parse(data).QRCodeString;
                         link.innerHTML = '<a href="' + linkHref + '">' + JSON.parse(data).QRCodeString + '</a>';
                     }
                     else {
